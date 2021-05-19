@@ -57,6 +57,12 @@ class FindCrypto extends React.Component
     			errorMessage="Empty input!";
     			throw new Error(errorMessage);
     		}
+
+    		if(this.input.current.value.match(/\p{sc=Cyrillic}/gu))
+    		{
+    			errorMessage="Don't use Cyrillic in search currency!";
+    			throw new Error(errorMessage);
+    		}
     		
     		let data=await fetch(`/currency/${this.input.current.value}`);
     		console.log(data);

@@ -20,7 +20,7 @@ const ListCrypto=()=>
 
 	useEffect(()=>
 	{
-		fetch("/currency/")
+		fetch("/getList/")
 			.then(res=>res.json())
 			.then(result=>
 				{
