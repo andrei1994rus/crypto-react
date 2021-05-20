@@ -7,7 +7,7 @@
 - Handle wrong path (404 not found);
 - Animation during loading;
 - Button hover effects;
-- Input hover effects;
+- Input focus effects;
 - Using form;
 - Async get request;
 - Handle wrong input;
@@ -24,11 +24,12 @@
 # Used stack technology 
 
 - ReactJS;
+- NodeJS;
 - HTML;
 - JS;
 - CSS, CSS3;
-- Libraries: Bootstrap, React-Bootstrap, React-Router-Dom, React-Redux, Redux, Styled Components, Redux-Devtools-Extension, Redux-Thunk, Material-UI, Lodash;
+- Libraries: Bootstrap, React-Bootstrap, React-Router-Dom, React-Redux, Redux, Styled Components, Redux-Devtools-Extension, Redux-Thunk, Material-UI, Lodash, Express;
 - Method: Mobile First;
 - Api: [hitbtc-api](https://github.com/hitbtc-com/hitbtc-api).
 ---
-[URL](https://andrei1994rus.github.io/crypto-react/) .
+[URL](https://crypto-reactjs.herokuapp.com/) .
