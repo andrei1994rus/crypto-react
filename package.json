@@ -2,8 +2,6 @@
   "name": "crypto-react",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
-  "homepage": "https://andrei1994rus.github.io/crypto-react/",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@testing-library/jest-dom": "^5.11.10",
@@ -14,6 +12,7 @@
     "express": "^4.17.1",
     "gh-pages": "^3.1.0",
     "lodash": "^4.17.21",
+    "path": "^0.12.7",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
@@ -29,13 +28,11 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "start": "npm run server",
     "server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build/",
-    "predeploy": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

@@ -1,8 +1,12 @@
 const express=require('express');
+const path=require('path');
 const request=require('request');
 
 const app=express();
-const port=3001;
+const port=process.env.PORT || 3000;
+
+app.use(express.static(__dirname));
+app.use(express.static(path.resolve(__dirname,'build')));
 
 app.get("/getList",(req,res)=>
 {
