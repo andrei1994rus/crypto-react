@@ -1,21 +1,19 @@
 import React,{useContext,useEffect} from 'react';
 
-import {useSelector} from 'react-redux';
-
 import ListContext from './listContext';
 import StylesTable from '../styledComponents/StylesTable';
 
 const TableListCrypto=()=>
 {
 	const {items}=useContext(ListContext);
-	const isDark=useSelector(state=>state.theme_redux.isDark);
 
 	useEffect(()=>
 	{
+		const chb=document.getElementById("checkbox");
 		let first_rows=document.querySelectorAll('.first_grid > div');
 		let other_rows=document.querySelectorAll('.grid > div');
 		
-		if(isDark)
+		if(chb.checked)
 		{
 			for(let row of first_rows)
 			{
@@ -40,7 +38,7 @@ const TableListCrypto=()=>
 				other_row.classList.remove('dark_bg');
 			}
 		}
-	},[isDark]);
+	},[]);
 
 	return(
 		<StylesTable>
