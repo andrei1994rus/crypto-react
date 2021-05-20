@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
-import {Container} from 'react-bootstrap';
-import NavBar from 'react-bootstrap/NavBar';
+import {Container,Navbar} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import {navigationBarData} from './navigationBarData';
 
@@ -53,10 +52,10 @@ class NavigationBar extends Component
 			<div>
                 <Container fluid="true">
                     <Styles>
-                        <NavBar expand="sm" bg="dark" variant="dark">
-                            <NavBar.Brand>Crypto on React</NavBar.Brand>
-                            <NavBar.Toggle aria-controls="navbar-nav"/>
-                            <NavBar.Collapse id="navbar-nav">
+                        <Navbar expand="sm" bg="dark" variant="dark">
+                            <Navbar.Brand>Crypto on React</Navbar.Brand>
+                            <Navbar.Toggle aria-controls="navbar-nav"/>
+                            <Navbar.Collapse id="navbar-nav">
                                 <ul className="list_navbar">
                                 	{array.map((item,index)=>
                                 		(
@@ -69,8 +68,8 @@ class NavigationBar extends Component
                                 		))
                                 	}
                                 </ul>
-                            </NavBar.Collapse>
-                        </NavBar>
+                            </Navbar.Collapse>
+                        </Navbar>
                     </Styles>
                 </Container>
             </div>   
