@@ -9,6 +9,27 @@ const port=process.env.PORT || 3000;
 app.use(express.static(__dirname));
 app.use(express.static(path.resolve(__dirname,'build')));
 
+
+const roundPayouFeeAfterComma=payoutFee=>
+{
+	let roundedPayoutFee=(payoutFee*1e8)/1e8;
+	let countAfterComma=roundedPayoutFee.toString().split('.')[1]?.length;
+
+	return (Number.isInteger(roundedPayoutFee)) ? roundedPayoutFee.toFixed(1) :
+	(countAfterComma>8) ? '~'+roundedPayoutFee.toFixed(8) : roundedPayoutFee;
+}
+
+function iterationsInObject(obj)
+{
+	for(let k in obj)
+	{
+		if(obj[k] instanceof Object)
+		{
+			obj[k]['payoutFee']=roundPayouFeeAfterComma(obj[k]['payoutFee']);
+		}
+    }
+}
+
 app.get("/getList",(req,res)=>
 {
 	console.log(`path:${req.url}`);
@@ -16,7 +37,11 @@ app.get("/getList",(req,res)=>
 	{
 		if(!error)
 		{
-			res.send(JSON.parse(body));
+			let parsedBody=JSON.parse(body);
+
+			iterationsInObject(parsedBody);
+
+			res.send(parsedBody);
 		}
 	});
 });
@@ -26,7 +51,17 @@ app.get("/currency/:id",(req,res)=>
 	console.log(`path:${decodeURIComponent(req.url)}`);
 	console.log(`id:${req.params.id}`);
 	console.log(`statusCode:${res.statusCode}`);
-	fetch(`https://api.hitbtc.com/api/2/public${req.url}`).then(resp=>resp.json()).then(json=>res.send(json));
+	fetch(`https://api.hitbtc.com/api/2/public${req.url}`).
+		then(resp=>resp.json()).
+		then(json=>
+		{
+			if(json['payoutFee'])
+			{
+				json['payoutFee']=roundPayouFeeAfterComma(json['payoutFee']);;
+			}
+
+			res.send(json)
+		});
 });
 
 app.listen(port,()=>console.log(`Server is running in ${port}`));
