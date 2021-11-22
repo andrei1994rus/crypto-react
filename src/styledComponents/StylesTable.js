@@ -5,42 +5,43 @@ const StylesTable=styled.div
 	.first_grid
 	{
 		display:grid;
-		grid-template-columns:15% 20% 20% 20% 20%;
+		text-align:center;
+		grid-template-columns:200px 250px 35vw 35vw 35vmax;
+
+		@media(min-width:1024px)
+		{
+			grid-template-columns:25% 25% 15% 15% 20%;
+		}
 	}
 
 	.grid
 	{
 		display:grid;
-		grid-template-columns:15% 20% 20% 20% 20%;
+		text-align:center;
+		grid-template-columns:200px 250px 35vw 35vw 35vmax;
+
+		@media(min-width:1024px)
+		{
+			grid-template-columns:25% 25% 15% 15% 20%;
+		}
 	}
 
 	.full_grid
 	{
 		position:relative;
-		top:50px;
-		display:flex;
-		flex-direction:column;
-		width:97%;
+		top:13vmax;
+		
+		overflow-x:scroll;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
 			position:static;
 			top:0;
-		}
-
-		@media(max-height:400px)
-		{
-			position:static;
-			top:0;
+			overflow-x:hidden;
 		}
 	}
 
-	.first_grid div[class~="dark_bg"]
-	{
-	  	border-color:white;
-	}
-
-	.grid div[class~="dark_bg"]
+	.first_grid div[class~="dark_bg"], .grid div[class~="dark_bg"]
 	{
 	  	border-color:white;
 	}
@@ -48,122 +49,173 @@ const StylesTable=styled.div
 	.first_grid-item-id
 	{
 		order:1;
-		font-size:75%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
 
-		@media(min-width:1001px)
+		border-top:2px solid black;
+		border-bottom:1px solid black;
+		border-left:2px solid black;
+		border-right:1px solid black;
+
+		@media(min-width:1024px)
 		{
-			font-size:18pt;
+			font-size:calc(2.2vmax*1.2);
 		}
-
 	}
 	
 	.first_grid-item-fullName
 	{
 		order:2;
-		font-size:75%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:2px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-right:1px solid black;
 		
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:18pt;
+			font-size:calc(2.2vmax*1.2);
 		}
 	}
 	
 	.first_grid-item-payingEnabled
 	{
 		order:3;
-		font-size:75%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:2px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-right:1px solid black;
 		
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:18pt;
+			font-size:calc(2.2vmax*1.2);
 		}
 	}
 	
 	.first_grid-item-crypto
 	{
 		order:4;
-		font-size:75%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:2px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-right:1px solid black;
 		
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:18pt;
+			font-size:calc(2.2vmax*1.2);
 		}
 	}
 	
 	.first_grid-item-payoutFee
 	{
 		order:5;
-		font-size:75%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:2px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-right:1px solid black;
 		
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:18pt;
+			font-size:calc(2.2vmax*1.2);
 		}
 	}
 
 	.grid-item-id
 	{
 		grid-column-start:1;
-		font-size:50%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:1px solid black;
+		border-bottom:1px solid black;
+		border-left:2px solid black;
+		border-right:1px solid black;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:16pt;
+			font-size:2.1vmax;
 		}
 	}
 
 	.grid-item-fullName
 	{
 		grid-column-start:2;
-		font-size:45%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:1px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-right:1px solid black;
+		padding:0 20px;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:16pt;
+			font-size:2.1vmax;
 		}
 	}
 
 	.grid-item-payingEnabled
 	{
 		grid-column-start:3;
-		font-size:45%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:1px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-right:1px solid black;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:16pt;
+			font-size:2.1vmax;
 		}
 	}
 
 	.grid-item-crypto
 	{
 		grid-column-start:4;
-		font-size:45%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:1px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-right:1px solid black;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:16pt;
+			font-size:2.1vmax;
 		}
 	}
 
 	.grid-item-payoutFee
 	{
 		grid-column-start:5;
-		font-size:30%;
-		border:1px solid black;
+		font-size:calc(2.8vmax*1.1);
+		border-top:1px solid black;
+		border-bottom:1px solid black;
+		border-left:1px solid black;
+		border-right:2px solid black;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			font-size:16pt;
+			font-size:2.1vmax;
 		}
+	}
+
+	.grid:last-child *:is(.grid-item-fullName, .grid-item-payingEnabled, .grid-item-crypto)
+	{
+		border-bottom:2px solid black;
+	}
+
+	.grid:last-child *:is(.grid-item-id)
+	{
+		border-bottom:2px solid black;
+	}
+
+	.grid:last-child *:is(.grid-item-payoutFee)
+	{
+		border-bottom:2px solid black;
+	}
+
+	.grid:last-child *[class~="dark_bg"]
+	{
+    	border-color:white;
 	}
 `;
 
