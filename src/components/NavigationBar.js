@@ -11,8 +11,20 @@ const Styles=styled.header
 `
   diplay:flex;
   flex-direction:row;
-  font-size:20px;
   align-items:center;
+
+  #navbar-brand
+  {
+  	font-weight:bold;
+  	font-size:4vmax;
+  	padding-right:calc(2vmax*0.80);
+  	color:white;
+
+  	@media(min-width:1024px)
+  	{
+		font-size:5vmax;
+  	}
+  }
 
   .a 
   {
@@ -32,8 +44,14 @@ const Styles=styled.header
   .list_navbar a
   {
   	text-decoration:none;
+  	font-size:3vmax;
   	color:hsla(0,0%,100%,.5);
-  	margin-left:10px;
+  	margin-left:15px;
+
+  	@media(min-width:1024px)
+  	{
+		font-size:4vmax;
+  	}
   }
 
   .list_navbar a[class~="active"]
@@ -53,7 +71,7 @@ class NavigationBar extends Component
                 <Container fluid="true">
                     <Styles>
                         <Navbar expand="sm" bg="dark" variant="dark">
-                            <Navbar.Brand>Crypto on React</Navbar.Brand>
+                            <span id="navbar-brand">Crypto on React</span>
                             <Navbar.Toggle aria-controls="navbar-nav"/>
                             <Navbar.Collapse id="navbar-nav">
                                 <ul className="list_navbar">
