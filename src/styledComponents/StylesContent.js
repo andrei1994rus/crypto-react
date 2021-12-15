@@ -3,70 +3,48 @@ import styled from 'styled-components';
 
 const StylesContent=styled.div
 `
-
 	.div_notFound_Content
 	{
-		margin-top:3%;
-		margin-left:3%;
+		padding-top:3%;
+		padding-left:3%;
 	}
 
 	.div_home_content
 	{
-		margin-top:3%;
-		margin-left:3%;
-		width:90%;
+		padding-top:3%;
+		padding-left:3%;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			margin-left:40px;
-			margin-top:40px;
-			width:95%;
-		}
-
-		@media(max-height:399px)
-		{
-			margin-top:1%;
-			margin-left:3%;
+			padding-left:10px;
+			padding-top:40px;
 		}
 	}
 
 	.div_findCrypto_content
 	{
-		margin-top:3%;
-		margin-left:3%;
+		padding-left:3%;
+		padding-top:3%;
 		width:97%;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			margin-left:40px;
-			margin-top:40px;
-		}
-
-		@media(max-height:399px)
-		{
-			margin-top:1%;
-			width:97%;
-			margin-left:3%;
+			padding-left:10px;
+			padding-top:40px;
 		}
 	}
 
 	.div_listCrypto_content
 	{
-		margin-top:3%;
-		margin-left:3%;
+		padding-top:3%;
+		padding-left:3%;
 		width:97%;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			margin-left:40px;
-			margin-top:40px;
-		}
-
-		@media(max-height:399px)
-		{
-			margin-top:1%;
-			width:98%;
-			margin-left:3%;
+			padding-left:10px;
+			padding-top:40px;
+			width:97%;
 		}
 	}
 	

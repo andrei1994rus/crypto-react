@@ -2,72 +2,60 @@ import styled from 'styled-components';
 
 const StylesPage=styled.div
 `
-	:root
-	{
-		padding-button:10%;
-	}
-
 	.link, .nav_item
 	{
 		color:red;
 		font-weight:900;
 		font-style:italic;
-		font-size:80%;
+		font-size:6vw;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			position:static;
-			font-size:110%;
+			font-size:3vmax;
 			top:0;
 		}
 
-		@media(max-height:400px)
+		@media(min-width:1280px)
 		{
-			position:static;
+			font-size:2vmax;
 			top:0;
-			font-size:100%;
 		}
 	}
 
 	.div_list
 	{
-		position:relative;
-		top:50px;
-		font-size:80%;
+		font-size:6vw;
+		padding-right:5vmax;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			position:static;
-			font-size:170%;
-			top:0;
+			font-size:3vmax;
+			padding:0;
 		}
 
-		@media(max-height:400px)
+		@media(min-width:1280px)
 		{
-			position:static;
-			top:0;
-			font-size:100%;
+			font-size:2vmax;
+			padding:0;
 		}
 	}
 
 	.div_text p 
 	{
-		position:relative;
-		top:50px;
-		font-size:80%;
+		padding-bottom:2vh;
+		font-size:6vw;
+		padding-right:3.5vmax;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			position:static;
-			font-size:200%;
-			top:0;
+			font-size:3vmax;
+			padding:0;
 		}
 
-		@media(max-height:400px)
+		@media(min-width:1280px)
 		{
-			position:static;
-			top:0;
-			font-size:100%;
+			font-size:2vmax;
+			padding:0;
 		}
 	}
 
@@ -76,111 +64,84 @@ const StylesPage=styled.div
 		display:flex;
 		justify-content:center;
 		align-items:center;
-		positon:relative;
-		padding:50px;
-		top:50px;
+		padding:1vh;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			position:static;
 			padding:0;
-			top:0;
-		}
-
-		@media(max-height:399px)
-		{
-			position:static;
-			padding:0;
-			top:0;
 		}
 	}
 
 	.div_findCrypto_loading
 	{
-		position:static;
 		float:right;
-		padding:0 10% 0 0;
-		top:0;
+		padding:0 1vh 0 0;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			padding:0 50% 0 0;
-			top:0;
-		}
-
-		@media(max-height:500px)
-		{
-			padding:0 50% 0 0;
-			top:0;
+			padding:0 5vh 0 0;
 		}
 	}
 
 	.div_errorMessage
 	{
-		positon:relative;
-		padding-top:50px;
-		top:50px;
+		padding-top:1vh;
+		font-size:6vw;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			padding-top:0;
-			top:0;
-		}
-
-		@media(max-height:399px)
-		{
-			position:static;
-			top:0;
-			padding-top:0;
+			padding:0;
+			font-size:2rem;
 		}
 	}
 
 	.form
 	{
-		position:relative;
-		top:50px;
+		padding-top:1vh;
 
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
 			position:static;
-			top:0;
-		}
-
-		@media(max-height:399px)
-		{
-			position:static;
-			top:0;
+			padding:0;
 		}
 	}
 
 	#btn
 	{
-		margin-top:10px;
+		margin-top:2vh;
 		display:flex;
 		background-color:blue;
 		border:5px solid blue;
 		color:white;
 		transition:1.25s;
+		font-size:3vmax;
 	}
 
 	#btn:hover
 	{
 	  	background-color:green;
 	  	border:5px solid green;
-	  	padding:0 calc(var(--padding-button)+13%);
+	  	padding:0 calc((var(--padding-button))*2.3);
 	  	box-shadow: 0 0 .90em .90em green;
 
-	  	@media(min-width:1001px)
+	  	@media(min-width:1024px)
 	  	{
-	  		padding:0 calc(var(--padding-button)+15%);
+	  		padding:0 calc((var(--padding-button))*2.5);
 	  	}
 	}
 
 	.form input
 	{
 		outline:none;
+		width:95vw;
+		font-size:3.5vh;
 		border:5px solid blue;
 		transition:1s;
+
+		@media(min-width:1024px)
+	  	{
+	  		width:700px;
+	  	}
 	}
 
 	.form input:focus
@@ -188,63 +149,9 @@ const StylesPage=styled.div
 		border:5px solid green;
 	}
 
-	.div_home_footer
-	{
-		color:white;
-		background-color:#343a40;
-		position:fixed;
-		width:100%;
-		bottom:0;
-	}
-
-	.div_findCrypto_footer
-	{
-		color:white;
-		background-color:#343a40;
-		position:fixed;
-		width:100%;
-		bottom:0;
-	}
-
-	.div_listCrypto_footer
-	{
-		color:white;
-		background-color:#343a40;
-		position:fixed;
-		width:100%;
-		bottom:0;
-	}
-	
-	#footer_text
-	{
-		display:flex;
-		justify-content:center;
-		font-size:110%;
-
-		@media(min-width:1001px)
-		{
-			font-size:300%;
-		}
-	}
-
 	.link_api
 	{
 		margin-left:5px;
-	}
-	
-	.div_listCrypto_margin
-	{
-		margin-top:29%;
-
-		@media(min-width:1001px)
-		{
-			margin-top:7%;
-		}
-
-		@media(max-height:399px)
-		{
-			margin-top:20%;
-		}
 	}
 `;
 

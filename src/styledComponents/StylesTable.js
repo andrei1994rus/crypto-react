@@ -6,7 +6,7 @@ const StylesTable=styled.div
 	{
 		display:grid;
 		text-align:center;
-		grid-template-columns:200px 250px 35vw 35vw 35vmax;
+		grid-template-columns:300px 300px 35vw 35vw 35vmax;
 
 		@media(min-width:1024px)
 		{
@@ -18,7 +18,7 @@ const StylesTable=styled.div
 	{
 		display:grid;
 		text-align:center;
-		grid-template-columns:200px 250px 35vw 35vw 35vmax;
+		grid-template-columns:300px 300px 35vw 35vw 35vmax;
 
 		@media(min-width:1024px)
 		{
@@ -28,15 +28,13 @@ const StylesTable=styled.div
 
 	.full_grid
 	{
-		position:relative;
-		top:13vmax;
+		padding-top:2vh;
 		
 		overflow-x:scroll;
 
 		@media(min-width:1024px)
 		{
-			position:static;
-			top:0;
+			padding:0;
 			overflow-x:hidden;
 		}
 	}
@@ -49,7 +47,7 @@ const StylesTable=styled.div
 	.first_grid-item-id
 	{
 		order:1;
-		font-size:calc(2.8vmax*1.1);
+		font-size:calc(3vmax*1.1);
 
 		border-top:2px solid black;
 		border-bottom:1px solid black;
@@ -65,7 +63,7 @@ const StylesTable=styled.div
 	.first_grid-item-fullName
 	{
 		order:2;
-		font-size:calc(2.8vmax*1.1);
+		font-size:calc(3vmax*1.1);
 		border-top:2px solid black;
 		border-bottom:1px solid black;
 		border-left:1px solid black;
@@ -80,7 +78,7 @@ const StylesTable=styled.div
 	.first_grid-item-payingEnabled
 	{
 		order:3;
-		font-size:calc(2.8vmax*1.1);
+		font-size:calc(3vmax*1.1);
 		border-top:2px solid black;
 		border-bottom:1px solid black;
 		border-left:1px solid black;
@@ -95,7 +93,7 @@ const StylesTable=styled.div
 	.first_grid-item-crypto
 	{
 		order:4;
-		font-size:calc(2.8vmax*1.1);
+		font-size:calc(3vmax*1.1);
 		border-top:2px solid black;
 		border-bottom:1px solid black;
 		border-left:1px solid black;
@@ -110,7 +108,7 @@ const StylesTable=styled.div
 	.first_grid-item-payoutFee
 	{
 		order:5;
-		font-size:calc(2.8vmax*1.1);
+		font-size:calc(3vmax*1.1);
 		border-top:2px solid black;
 		border-bottom:1px solid black;
 		border-left:1px solid black;

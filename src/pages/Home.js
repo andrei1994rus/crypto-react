@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 
 import {Typography} from '@material-ui/core';
 
@@ -8,11 +8,10 @@ import linkText from '../components/linkText';
 import navItemText from '../components/navItemText';
 
 import headerPage from '../components/headerPage';
-import Footer from '../components/footer';
 
 const links=["/list_crypto","/find_crypto"];
 
-class Home extends React.Component
+class Home extends Component
 {
 	render=()=>
 	(
@@ -37,9 +36,6 @@ class Home extends React.Component
 					</ul>
 				</div>
 			</div>
-			<div className="div_home_footer">
-			  	<Footer/> 
-		  	</div>
 		</StylesPage>
 	)
 }

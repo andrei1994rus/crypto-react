@@ -29,11 +29,11 @@ const CryptoModal=()=>
 		    </Modal.Header>
 		    <Modal.Body>
 		        <StylesModal>
-					Crypto info:
+					<span>Crypto info:</span>
 					<ul>
 						<li>id-{cryptoInfo.id};</li>
 						<li>fullName-{cryptoInfo.fullName};</li>
-						<li>paying enabled?-{cryptoInfo.payinEnabled ? "yes" : "no"};</li>
+						<li>is paying enabled?-{cryptoInfo.payinEnabled ? "yes" : "no"};</li>
 						<li>is crypto?-{cryptoInfo.crypto ? "yes" : "no"};</li>
 						<li>payoutFee-{cryptoInfo.payoutFee ? cryptoInfo.payoutFee : "unknown"}.</li>
 					</ul>

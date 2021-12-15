@@ -4,16 +4,9 @@ const StylesHeader=styled.div
 `
 	#page_header
 	{
-		position:absolute;
-
-		@media(min-width:1001px)
+		@media(min-width:1024px)
 		{
-			position:static;
-		}
-		
-		@media(max-height:399px)
-		{
-			position:static;
+			font-size:calc(2.5rem*1.5);
 		}
 	}
 `;

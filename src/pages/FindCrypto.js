@@ -1,17 +1,16 @@
-import React,{createRef} from 'react';
+import React,{createRef,Component} from 'react';
 
 import StylesPage from '../styledComponents/StylesPage';
 
 import headerPage from '../components/headerPage';
 import Loading from '../components/Loading';
-import Footer from '../components/footer';
 import CryptoModal from '../components/cryptoModal';
 import ErrorModal from '../components/errorModal';
 
 import ItemContext from '../components/itemContext';
 import ErrorContext from '../components/errorContext';
 
-class FindCrypto extends React.Component
+class FindCrypto extends Component
 {
 	constructor(props)
 	{
@@ -82,10 +81,12 @@ class FindCrypto extends React.Component
     		{
     			if(json_data.error)
     			{
-    				let errorMessage=
-    				`${json_data.error.message}. ${json_data.error.description}`;
+    				let advice='Go to page List Crypto, to get list of all available currencies.';
+    				let errorMessage=`${json_data.error.message}. ${advice}`;
+	    			
 	    			console.log(json_data.error);
 	    			console.log(errorMessage);
+	    			
 	    			this.setState(
 	    			{
 	    				cryptoInfo:{},
@@ -161,9 +162,7 @@ class FindCrypto extends React.Component
 						</div>
 					}
 				</div>
-				<div className="div_findCrypto_footer">
-				  	<Footer/> 
-			  	</div>
+				
 			</StylesPage>
 		);
 	}

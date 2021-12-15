@@ -1,3 +1,8 @@
+:root
+{
+	--padding-button:10%;
+}
+
 body 
 {
   margin:0;
@@ -5,6 +10,45 @@ body
   font-family:'Arial','Helvetica',sans-serif;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+}
+
+.wrapper
+{
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+}
+
+.div_footer
+{
+	color:white;
+	background-color:#343a40;
+	position:fixed;
+	width:100%;
+	bottom:0;
+}
+
+#footer_text, #second_footer_text
+{
+	display:flex;
+	justify-content:center;
+	text-align:center;
+	font-size:4vh;
+	font-weight:600;
+	z-index:1;
+}
+
+@media(min-width:1024px)
+{
+	#footer_text, #second_footer_text
+	{
+		font-size:4.8vh;
+	}
+}
+
+.link_api
+{
+	margin-left:5px;
 }
 
 .dark_bg

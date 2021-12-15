@@ -6,7 +6,6 @@ import headerPage from '../components/headerPage';
 import Loading from '../components/Loading';
 import TableListCrypto from '../components/tableListCrypto';
 import ErrorMessage from '../components/ErrorMessage';
-import Footer from '../components/footer';
 
 import ListContext from '../components/listContext';
 
@@ -66,10 +65,6 @@ const ListCrypto=()=>
 					</ListContext.Provider>	
 				}
 			</div>
-			<div className="div_listCrypto_margin"></div>
-			<div className="div_listCrypto_footer">
-			  	<Footer/> 
-		  	</div>
 		</StylesPage>
 	);
 }
