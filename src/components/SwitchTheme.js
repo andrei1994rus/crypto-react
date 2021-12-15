@@ -5,7 +5,7 @@ const Label=styled.label
 ` 
 	position:relative;
 	top:3px;
-	right:30px;
+	right:4%;
 	float:right;
 `;
 
@@ -21,8 +21,13 @@ const Input=styled.input
 
     	&:before
     	{
-    		left:calc(100%-2px);
+    		left:calc(-9%);
     		transform:translateX(100%);
+
+    		@media(min-width:1024px)
+    		{
+    			left:calc(1vmin*0.8);
+    		}
     	}
     }
 `;
@@ -38,6 +43,12 @@ const Slider=styled.span
   	position:relative;
   	transition:background-color 0.2s;
 
+  	@media(min-width:1024px)
+  	{
+  		width:7vmax;
+  		height:5vmax;
+  	}
+
   	&:before
 	{
 		content:"";
@@ -49,6 +60,17 @@ const Slider=styled.span
 		border-radius:45px;
 		transition:0.2s;
 		background:#fff;
+
+		@media(min-width:1024px)
+		{
+			width:3vmax;
+  			height:4vmax;
+		}
+
+		@media(min-width:1024px)
+    	{
+    		top:calc(1vmin*0.8);
+    	}
 	}
 
 	&:active:before
@@ -59,13 +81,24 @@ const Slider=styled.span
 
 const TextStyle=styled.div
 `
-	margin-left:3%;
-	width:90%;
+	padding-left:3%;
 
-	@media(min-width:1001px)
+	@media(min-width:1024px)
 	{
-		margin-left:40px;
-		width:95%;
+		padding-left:10px;
+	}
+
+	#theme
+	{
+		display:flex;
+		font-weight:bold;
+		font-size:5vh;
+		padding-right:5vmax;
+
+		@media(min-width:1024px)
+		{
+			font-size:6vmax;
+		}
 	}
 `;
 
@@ -152,7 +185,7 @@ export default class SwitchTheme extends Component
 			        <Slider/>
 			    </Label>
 			    <TextStyle>
-			    	<h5>Theme:{isChecked ? "dark" : "light"}</h5>
+			    	<span id="theme">Theme: {isChecked ? "dark" : "light"}</span>
 			    </TextStyle> 
 		    </div>
 	    );
