@@ -44,7 +44,7 @@ const StylesContent=styled.div
 		{
 			padding-left:10px;
 			padding-top:40px;
-			width:97%;
+			width:99%;
 		}
 	}
 	

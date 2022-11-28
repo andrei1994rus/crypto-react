@@ -16,13 +16,13 @@ const Styles=styled.header
   #navbar-brand
   {
   	font-weight:bold;
-  	font-size:4vmax;
+  	font-size:4vw;
   	padding-right:calc(2vmax*0.80);
   	color:white;
 
   	@media(min-width:1024px)
   	{
-		font-size:5vmax;
+		font-size:3.5vw;
   	}
   }
 
@@ -44,13 +44,13 @@ const Styles=styled.header
   .list_navbar a
   {
   	text-decoration:none;
-  	font-size:3vmax;
+  	font-size:4vw;
   	color:hsla(0,0%,100%,.5);
   	margin-left:15px;
 
   	@media(min-width:1024px)
   	{
-		font-size:4vmax;
+		font-size:3.5vw;
   	}
   }
 

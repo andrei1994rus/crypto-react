@@ -192,7 +192,7 @@ const StylesTable=styled.div
 
 		@media(min-width:1024px)
 		{
-			font-size:2.1vmax;
+			font-size:1.9vw;
 		}
 	}
 
