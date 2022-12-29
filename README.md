@@ -33,4 +33,4 @@
 - Method: Mobile First;
 - Api: [hitbtc-api](https://github.com/hitbtc-com/hitbtc-api).
 ---
-[URL](https://crypto-reactjs.herokuapp.com/) .
+[URL](https://crypto-react.glitch.me/) .
