@@ -60,19 +60,20 @@ class FindCrypto extends Component
     		let data=await fetch(`/currency/${this.input.current.value}`);
     		console.log(data);
     		console.log("status:"+data.status);
-    		json_data=await data.json();
     		
     		if(data.status!==200)
     		{
-    			throw new Error(data.statusText+" "+data.status);
+				errorMessage=data.statusText+" "+data.status+"!";
+    			throw new Error(errorMessage);
     		}
     		
+			json_data=await data.json();
     		console.log(json_data);
     	}
 
     	catch(e)
     	{
-    		console.warn(e);
+    		console.error(e);
     	}
 
     	finally

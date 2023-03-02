@@ -20,7 +20,15 @@ const ListCrypto=()=>
 	useEffect(()=>
 	{
 		fetch("/getList/")
-			.then(res=>res.json())
+			.then(res=>
+			{
+				if(res.status!==200)
+				{
+					throw new Error(res.statusText+" "+res.status+"!");
+				}
+
+				return res.json();
+			})
 			.then(result=>
 				{
 					setIsLoaded(true);
