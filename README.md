@@ -30,6 +30,7 @@
 - JS;
 - CSS, CSS3;
 - Libraries: Bootstrap, React-Bootstrap, React-Router-Dom, React-Redux, Redux, Styled Components, Redux-Devtools-Extension, Redux-Thunk, Material-UI, Lodash, Express;
+- Test library Jest;
 - Method: Mobile First;
 - Api: [hitbtc-api](https://github.com/hitbtc-com/hitbtc-api).
 ---
