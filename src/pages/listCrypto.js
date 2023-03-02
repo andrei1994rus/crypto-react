@@ -9,6 +9,8 @@ import ErrorMessage from '../components/ErrorMessage';
 
 import ListContext from '../components/listContext';
 
+import getData from '../functions/getData';
+
 import {sortBy} from 'lodash';
 
 const ListCrypto=()=>
@@ -19,7 +21,7 @@ const ListCrypto=()=>
 
 	useEffect(()=>
 	{
-		fetch("/getList/")
+		getData("/getList/")
 			.then(res=>
 			{
 				if(res.status!==200)

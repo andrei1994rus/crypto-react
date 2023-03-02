@@ -10,6 +10,8 @@ import ErrorModal from '../components/errorModal';
 import ItemContext from '../components/itemContext';
 import ErrorContext from '../components/errorContext';
 
+import getData from '../functions/getData';
+
 class FindCrypto extends Component
 {
 	constructor(props)
@@ -57,7 +59,7 @@ class FindCrypto extends Component
     			throw new Error(errorMessage);
     		}
     		
-    		let data=await fetch(`/currency/${this.input.current.value}`);
+    		let data=await getData(`/currency/${this.input.current.value}`);
     		console.log(data);
     		console.log("status:"+data.status);
     		
