@@ -59,7 +59,7 @@ class FindCrypto extends Component
     			throw new Error(errorMessage);
     		}
     		
-    		let data=await getData(`/currency/${this.input.current.value}`);
+    		let data=await getData(`/.netlify/functions/api/currency/${this.input.current.value}`);
     		console.log(data);
     		console.log("status:"+data.status);
     		
@@ -105,7 +105,7 @@ class FindCrypto extends Component
 	    				cryptoInfo:
 	    				{
 	    					id:json_data.id,
-	    					fullName:json_data.id,
+	    					fullName:json_data.fullName,
 	    					payinEnabled:json_data.payinEnabled,
 	    					crypto:json_data.crypto,
 	    					payoutFee:json_data.payoutFee

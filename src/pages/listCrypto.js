@@ -21,7 +21,7 @@ const ListCrypto=()=>
 
 	useEffect(()=>
 	{
-		getData("/getList/")
+		getData("/.netlify/functions/api/getList/")
 			.then(res=>
 			{
 				if(res.status!==200)

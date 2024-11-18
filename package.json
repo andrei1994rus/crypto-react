@@ -20,16 +20,16 @@
     "redux-thunk": "^2.3.0",
     "request": "^2.88.2",
     "styled-components": "^5.2.3",
-    "jest": "26.6.0"
+    "jest": "26.6.0",
+    "netlify-cli": "^17.37.2",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
   },
   "scripts": {
     "start": "npm run server",
-    "server": "node server.js",
+    "server": "node functions/api.js",
     "build": "react-scripts build",
     "test": "jest"
-  },
-  "engines": {
-    "node": "14.x"
   },
   "browserslist": {
     "production": [
