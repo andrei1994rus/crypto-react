@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { lazy, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadTheme } from './reduxFeature/actions';
@@ -8,11 +8,16 @@ import SwitchTheme from './components/SwitchTheme';
 import Footer from './components/footer';
 
 import Home from './pages/Home';
-import ListCrypto from './pages/listCrypto';
-import FindCrypto from './pages/FindCrypto';
 import NotFound from './pages/notFound';
+import withSuspense from './hoc/withSuspense';
 
 import StylesContent from './styledComponents/StylesContent';
+
+const ListCrypto = lazy(() => import('./pages/listCrypto'));
+const FindCrypto = lazy(() => import('./pages/FindCrypto'));
+
+const WithSuspenseListCrypto = withSuspense(ListCrypto);
+const WithSuspenseFindCrypto = withSuspense(FindCrypto);
 
 const stickyTopStyle = {
   div: {
@@ -88,8 +93,8 @@ const App = () => {
           <StylesContent>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/list_crypto" element={<ListCrypto />} />
-              <Route path="/find_crypto" element={<FindCrypto />} />
+              <Route path="/list_crypto" element={<WithSuspenseListCrypto />} />
+              <Route path="/find_crypto" element={<WithSuspenseFindCrypto />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </StylesContent>

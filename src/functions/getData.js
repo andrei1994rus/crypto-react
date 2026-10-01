@@ -1,6 +1,5 @@
-function getData(url)
-{
-    return fetch(url);
+function getData(url) {
+  return fetch(url);
 }
 
-module.exports=getData;
+module.exports = getData;
