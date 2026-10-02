@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/crypto-react/static/css/main.7b199694.chunk.css",
-    "main.js": "/crypto-react/static/js/main.418d7ac3.chunk.js",
-    "main.js.map": "/crypto-react/static/js/main.418d7ac3.chunk.js.map",
+    "main.js": "/crypto-react/static/js/main.bdba5f8d.chunk.js",
+    "main.js.map": "/crypto-react/static/js/main.bdba5f8d.chunk.js.map",
     "runtime-main.js": "/crypto-react/static/js/runtime-main.2990330c.js",
     "runtime-main.js.map": "/crypto-react/static/js/runtime-main.2990330c.js.map",
     "static/css/2.8ea71ad7.chunk.css": "/crypto-react/static/css/2.8ea71ad7.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.8ea71ad7.chunk.css",
     "static/js/2.4ca68bfc.chunk.js",
     "static/css/main.7b199694.chunk.css",
-    "static/js/main.418d7ac3.chunk.js"
+    "static/js/main.bdba5f8d.chunk.js"
   ]
 }
