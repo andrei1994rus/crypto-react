@@ -75,7 +75,7 @@ const App = () => {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/crypto-react">
       <div className="wrapper">
         <div className="div_sticky_top" style={stickyTopStyle.div}>
           <NavigationBar />

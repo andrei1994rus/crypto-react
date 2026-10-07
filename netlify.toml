@@ -1,3 +1,0 @@
-[build]
-    functions = "functions"
-    node_bundler = "esbuild"
