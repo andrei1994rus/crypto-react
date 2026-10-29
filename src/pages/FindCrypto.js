@@ -53,10 +53,10 @@ class FindCrypto extends Component {
       let data = await getData(
         `${process.env.REACT_APP_URL}/currency/${this.input.current.value}`
       );
-      console.log(data);
+      console.log('ok: ' + data.ok);
       console.log('status:' + data.status);
 
-      if (data.status !== 200) {
+      if (!data.ok) {
         const statusText =
           data.status === 404 ? 'NOT FOUND' : 'Failed to fetch';
         let message = statusText + ' (' + data.status + ')!';

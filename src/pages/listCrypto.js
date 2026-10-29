@@ -21,7 +21,7 @@ const ListCrypto = () => {
   useEffect(() => {
     getData(`${process.env.REACT_APP_URL}/currency`)
       .then((res) => {
-        if (res.status !== 200) {
+        if (!res.ok) {
           throw new Error('Failed to fetch' + ' (' + res.status + ')!');
         }
 
